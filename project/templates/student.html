@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Student · Resume Relevance{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-3"><i class="fa-solid fa-upload me-2"></i>Upload Resume & Job Description</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="jdFile" class="form-label">Job Description (PDF/DOCX)</label>
+            <input type="file" class="form-control" id="jdFile" name="jdFile" accept=".pdf,.docx" required>
+          </div>
+          <div class="mb-3">
+            <label for="resume" class="form-label">Resume (PDF/DOCX)</label>
+            <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.docx" required>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm me-2 d-none" id="uploadSpinner"></span>
+            Submit
+          </button>
+        </form>
+
+        <hr class="my-4">
+
+        <div id="result" class="d-none">
+          <h3 class="h5">Results</h3>
+          <div class="progress mb-2" role="progressbar" aria-label="Relevance score">
+            <div id="scoreBar" class="progress-bar" style="width: 0%"></div>
+          </div>
+          <p class="mb-1"><strong>Verdict:</strong> <span id="verdict"></span></p>
+          <div class="mb-1">
+            <strong>Matched:</strong>
+            <div id="matchedBadges" class="mt-1 d-flex flex-wrap gap-2"></div>
+          </div>
+          <div class="mb-1">
+            <strong>Missing:</strong>
+            <div id="missingBadges" class="mt-1 d-flex flex-wrap gap-2"></div>
+          </div>
+          <p class="mb-0"><strong>Feedback:</strong> <span id="feedback"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

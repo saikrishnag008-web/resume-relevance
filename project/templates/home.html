@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Home · Resume Relevance{% endblock %}
+{% block content %}
+<section class="py-5 hero-section text-center bg-gradient rounded-4 shadow-sm">
+  <h1 class="display-5 fw-bold text-black mb-3"><i class="fa-solid fa-laptop-code me-2"></i>Resume Relevance Checker</h1>
+  <p class="lead text-black-50 mb-4">Quickly gauge how well a resume matches a job description.</p>
+  <div class="d-flex justify-content-center gap-3">
+    <a href="{{ url_for('student') }}" class="btn btn-light btn-lg"><i class="fa-solid fa-user-graduate me-2"></i>Student Portal</a>
+    <a href="{{ url_for('admin') }}" class="btn btn-light btn-lg"><i class="fa-solid fa-user-shield me-2"></i>Admin Login</a>
+  </div>
+</section>
+
+<section class="row g-4 mt-3">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Upload Files</h5>
+        <p class="card-text text-muted">Securely upload a Job Description and a Resume (PDF/DOCX). We extract text locally.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Get Instant Score</h5>
+        <p class="card-text text-muted">We compute a relevance score and highlight missing keywords to improve alignment.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Actionable Feedback</h5>
+        <p class="card-text text-muted">Follow the suggestions to adjust the resume for a better match.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

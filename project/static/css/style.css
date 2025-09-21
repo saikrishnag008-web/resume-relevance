@@ -1,0 +1,17 @@
+/* Custom tweaks on top of Bootstrap */
+.hero-section {
+  background: linear-gradient(135deg, #6a82fb, #00c9ff);
+  color: #fff;
+}
+
+.navbar-brand .fa-file-circle-check {
+  opacity: 0.9;
+}
+
+.card {
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+footer {
+  background: #fff;
+}
